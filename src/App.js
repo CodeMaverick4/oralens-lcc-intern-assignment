@@ -23,9 +23,9 @@ function App() {
   const handleAge = (e) => {
     const dateOfBirth = new Date(e.target.value);
     const today = new Date();
-    // const birthDate = new Date(dateOfBirth);
+    
 
-    // Check if the date of birth is over 130 years ago
+    
     const maxAllowedDate = new Date();
     maxAllowedDate.setFullYear(today.getFullYear() - 130);
 
@@ -36,12 +36,12 @@ function App() {
       return;
     }
 
-    // Calculate age difference in years, months, and days
+    
     let years = today.getFullYear() - dateOfBirth.getFullYear();
     let months = today.getMonth() - dateOfBirth.getMonth();
     let days = today.getDate() - dateOfBirth.getDate();
 
-    // Adjust if months or days are negative
+    
     if (days < 0) {
       months--;
       const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
@@ -52,12 +52,10 @@ function App() {
       months += 12;
     }
 
-    // Handle edge case for "0 years, 0 months, 0 days"
     if (years === 0 && months === 0 && days === 0) {
       days = 1; // To avoid displaying 0 years, 0 months, 0 days
     }
-
-    // Update the displayed age
+    
     const ageText = `${years} year${years !== 1 ? "s" : ""} ${months} month${months !== 1 ? "s" : ""} ${days} day${days !== 1 ? "s" : ""}`;
     document.getElementById("Age").textContent = ageText;
     
@@ -125,7 +123,7 @@ function App() {
               <span className="text-red-500">{ageError}</span>
             </div>
             
- {/* ----------- */}
+
            <div className="flex flex-col gap-2 ">
               <span> Upload File </span>
 
