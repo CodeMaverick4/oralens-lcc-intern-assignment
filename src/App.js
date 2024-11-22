@@ -89,7 +89,7 @@ function App() {
 
 
   return (
-    <div className='bg-[#fcf5eb] flex justify-center items-center h-screen font-mono '>
+    <div className='relative bg-[#fcf5eb] flex justify-center items-center h-screen font-mono '>
       <div className='bg-white border border-black rounded-2xl p-7'>
           <form action="#" className='flex flex-col gap-7 '>
             <h1 className="font-semibold text-3xl text-center ">Submit you details</h1>
@@ -151,7 +151,8 @@ function App() {
             </div>
           </form>
       </div>
-      
+      <a href="https://github.com/CodeMaverick4/oralens-lcc-intern-assignment" target="_blank" className="absolute bottom-10 right-10 px-4 py-2 rounded-lg text-white bg-black animate-bounce">want to see code?</a>
+      <h1 className=" absolute bottom-3 left-1/2 -translate-x-1/2"> Developed by Burhan Ahmed :></h1>
     </div>
   );
 }
